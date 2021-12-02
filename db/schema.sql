@@ -6,7 +6,7 @@ USE employees_db;
 DROP TABLE IF EXISTS department;
 CREATE TABLE department (
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    dep_name (30) NOT NULL
+    dep_name varchar(30) NOT NULL
 );
 
 DROP TABLE IF EXISTS employee_role;
@@ -21,12 +21,11 @@ CREATE TABLE employee_role (
 
 DROP TABLE IF EXISTS employee;
 CREATE TABLE employee (
-    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL,
-    role_id INT NOT NULL,
-    manager_id INT,
-    FOREIGN KEY (role_id)
-    REFERENCES employee_role(id),
-    FOREIGN KEY (manager_id)
-    REFERENCES employee(id)
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  first_name VARCHAR(30),
+  last_name VARCHAR(30),
+  role_id INT,
+  FOREIGN KEY (role_id) REFERENCES employee_role(id) ON DELETE SET NULL,
+  manager_id INT,
+  FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
+);
