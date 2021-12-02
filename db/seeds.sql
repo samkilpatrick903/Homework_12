@@ -4,7 +4,7 @@ VALUES  ("Accounting"),
         ("Customer Service"),
         ("Quality Assurance"),
         ("Warehouse"),
-        ("Management"),
+        ("Management");
 
 INSERT INTO employee_role (title, salary, department_id)
 VALUES  ("Regional Manager", 100000, 6),
