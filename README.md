@@ -14,3 +14,6 @@ Packages needed to run components of this application: inquirer, MySQL2, and con
 Inquirer package
 MySQL2
 console.table
+
+# Video
+https://watch.screencastify.com/v/J61moBrGp9FElkEdFXJT
